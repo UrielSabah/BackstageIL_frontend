@@ -1,0 +1,6 @@
+.common-page{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    flex: 1;
+}
