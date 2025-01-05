@@ -1,4 +1,3 @@
-// HallRecommendations.jsx
 const HallRecommendations = () => {
     return (
         <div>

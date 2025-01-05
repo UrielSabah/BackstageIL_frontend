@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchHallDetails } from "../services/Api.jsx"; // Import the API function
+import PropTypes from "prop-types";
 
-// eslint-disable-next-line react/prop-types
 function LayoutHallInformation({ selectedHall }) {
     const [hallDetails, setHallDetails] = useState(null);  // State to store fetched hall data
     const [loading, setLoading] = useState(true);           // State for loading status
@@ -38,7 +38,6 @@ function LayoutHallInformation({ selectedHall }) {
     // Render the hall details if available
     return (
         <div className="p-3">
-            <h2>{hallDetails.hall_name}</h2>
             <p>
                 Below are the details for <strong>{hallDetails.hall_name}</strong>:
             </p>
@@ -75,5 +74,9 @@ function LayoutHallInformation({ selectedHall }) {
         </div>
     );
 }
+
+LayoutHallInformation.propTypes = {
+    selectedHall: PropTypes.string.isRequired,
+};
 
 export default LayoutHallInformation;

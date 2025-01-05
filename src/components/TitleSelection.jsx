@@ -1,11 +1,16 @@
-// eslint-disable-next-line react/prop-types
-const TitleSelection = ({ selectedOption }) => {
-    console.log('Selected Option in TitleSelection:', selectedOption);
+import PropTypes from "prop-types";
+
+const TitleSelection = ({ selectedTitleOption }) => {
+    console.log('Selected Option in TitleSelection:', selectedTitleOption);
     return (
         <div>
-            <h2>Selected Option: {selectedOption?.city_and_hall_name || 'No option selected'}</h2>
+            <h2>Selected Hall: {selectedTitleOption || 'No option selected'}</h2>
         </div>
     );
+};
+
+TitleSelection.propTypes = {
+    selectedTitleOption: PropTypes.string.isRequired
 };
 
 export default TitleSelection;

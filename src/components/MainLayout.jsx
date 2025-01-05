@@ -5,30 +5,28 @@ import LayoutHallPictures from '../components/LayoutHallPictures';
 import HallRecommendations from '../components/HallRecommendations';
 
 import GoogleAds from "./GoogleAds.jsx";
+import PropTypes from "prop-types";
 
 
-const MainLayout = ({ selectedOption, selectedRadioOption, selectedDropdownOption }) => {
+const MainLayout = ({ selectedRadioOption, selectedDropdownOption }) => {
 
     const renderLayout = () => {
         switch (selectedRadioOption) {
             case 'Hall Information':
-                return <LayoutHallInformation selectedHall={1} />;
+                return <LayoutHallInformation selectedHall={selectedDropdownOption.id.toString()} />;
             case 'Hall Pictures':
-                return <LayoutHallPictures selectedOption={selectedRadioOption} />;
+                return <LayoutHallPictures/>;
             case 'Hall Recommendations':
-                return <HallRecommendations selectedOption={selectedRadioOption} />;
+                return <HallRecommendations/>;
             default:
                 return null;
         }
     };
     return (
         <div className="main-layout">
-            <h1>Welcome to the Main Page</h1>
-            <TitleSelection selectedOption={selectedOption}/>
+            <TitleSelection selectedTitleOption={selectedDropdownOption.name}/>
             <GoogleAds adSlot="9204181023" width={728} height={90}/>
-            <h2>Selected Options:</h2>
-            <p>Radio Button: {selectedRadioOption}</p>
-            <p>Dropdown: {selectedDropdownOption}</p>
+            <h2>Selected {selectedRadioOption}:</h2>
             {renderLayout()}
             <GoogleAds adSlot="9204181023" width={728} height={90}/>
         </div>
@@ -36,4 +34,8 @@ const MainLayout = ({ selectedOption, selectedRadioOption, selectedDropdownOptio
     );
 };
 
+MainLayout.propTypes = {
+    selectedRadioOption: PropTypes.string.isRequired,
+    selectedDropdownOption: PropTypes.object.isRequired,
+};
 export default MainLayout;

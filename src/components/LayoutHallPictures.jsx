@@ -1,4 +1,4 @@
-// LayoutHallPictures.jsx
+
 const LayoutHallPictures = () => {
     return (
         <div className="card">
