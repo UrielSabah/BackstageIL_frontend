@@ -11,7 +11,9 @@ function App() {
             <div className="app-container">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/">BackstageIL</Link>
+                        <Link className="navbar-brand" to="/">
+                            <img src="/BackstageIL_logo_mainpage.png" alt="BackstageIL Logo" width="120"/>
+                        </Link>
                         <div className="collapse navbar-collapse">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
