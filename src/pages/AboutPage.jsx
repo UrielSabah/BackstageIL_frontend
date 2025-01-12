@@ -17,7 +17,7 @@ function AboutPage() {
             <h2>Contact Information</h2>
             <ul>
                 <li><strong>Country:</strong> Israel</li>
-                <li><strong>Email:</strong> <a href="mailto:urielsa@elementostage.com">contact@backstageil.com</a></li>
+                <li><strong>Email:</strong> <a href="mailto:urielsa@elementostage.com">urielsa@elementostage.com</a></li>
             </ul>
             <hr />
             <GoogleAds adSlot="9204181023" width={728} height={90} />
